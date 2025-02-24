@@ -1,2 +1,33 @@
-def admin_panel():
-    print("This is Admin Panel module")
+class AdminPanel:
+    """
+    Класс AdminPanel представляет собой модуль для управления административной панелью.
+    Он предоставляет функциональность для работы с администраторами и отправки сообщений.
+    """
+
+    def __init__(self):
+        """
+        Инициализирует экземпляр AdminPanel.
+        При создании объекта выводит сообщение о том, что модуль административной панели был инициализирован.
+        """
+        print("This is Admin Panel module")
+
+    @property
+    def admins_count(self) -> int:
+        """
+        Возвращает количество администраторов в системе.
+
+        :return: Количество администраторов. В текущей реализации всегда возвращает 0.
+        :rtype: int
+        """
+        return 0
+
+    def send_message(self, user_ids: list[int]) -> None:
+        """
+        Отправляет сообщение указанным пользователям.
+
+        :param user_ids: Список идентификаторов пользователей, которым будет отправлено сообщение.
+        :type user_ids: list[int]
+        :return: None
+        """
+        print("This message will be sent to", user_ids)
+        
